@@ -1,0 +1,34 @@
+{
+  "name": "@infograph/demo",
+  "version": "0.0.0",
+  "description": "Most basic responsive infographic, for demonstrative purposes",
+  "keywords": [
+    "responsive",
+    "infographics",
+    "simple"
+  ],
+  "author": "Teodor Sandu <doru87@gmail.com>",
+  "homepage": "https://infograph.sandu.dev/demo",
+  "license": "MIT",
+  "main": "lib/demo.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steodor/infograph.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@infograph/demo.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/steodor/infograph/issues"
+  }
+}
