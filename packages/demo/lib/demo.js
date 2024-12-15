@@ -8,7 +8,13 @@ const defaults = {
   contents: ['first text', 'second text', 'third text', 'fourth text'],
 }
 
-function demo({ prefix, colors, contents }) {
+const numCache = {};
+
+function demo({ prefix, colors, contents } = {}) {
+  prefix = prefix || defaults.prefix;
+  colors = colors || defaults.colors;
+  contents = contents || defaults.contents;
+
   return `
   <style type="text/css'>
     .${prefix}-infographic {
@@ -41,7 +47,7 @@ function demo({ prefix, colors, contents }) {
   </style>
   <div class="${prefix}-infographic">
     ${contents.map((content, index) => `<div class="item" style="--c: ${colors[index % colors.length]}">
-      <div class="number">${String(index + 1).padStart(2, '0')}</div>
+      <div class="number">${numCache[index] || (numCache[index] = String(index + 1).padStart(2, '0'))}</div>
       <div class="content">${content}</div>
     </div>
     `)}
