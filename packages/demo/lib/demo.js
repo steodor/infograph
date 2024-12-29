@@ -37,7 +37,7 @@ function demo({ prefix, colors, contents } = {}) {
     .${prefix}-infographic .number {
       flex-shrink: 0;
       flex-grow: 0;
-      font-size: 3em;
+      font-size: 4em;
       font-weight: bold;
       display: flex;
       align-items: center;
